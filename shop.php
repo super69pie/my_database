@@ -72,6 +72,8 @@
     session_start();
     ?>
 
+
+
 <?php
         if (($_SERVER['REQUEST_METHOD'] === "POST")&&($_POST['add2shoping_car'])){
             $checkCartExists = $db->prepare("SELECT COUNT(*) FROM shoping_car WHERE item_id = :IID AND ID = :ID");
@@ -136,7 +138,7 @@
                 <a href="shoping_car.php"> <!-- 加入這一行 -->
                   <img src="images/heading-img.png" alt="">
                   </a> <!-- 到這一行 -->
-                <h2>狗狗商城</h2>
+                <h2> ⬈點擊進入購物車車 ⬉</h2>
               </div>
                 <p>瀏覽你的商品</p>
                 <div class="row">
@@ -169,13 +171,18 @@
                     }
                     ?>
                 </div>
-
-                
-                
-                
-                
-
     </section>
+    
+    <section class="about_section layout_padding">
+        <div class="container">
+            <div class="detail-box">
+              <div class="heading_container">
+                <a href="shoping_car.php"> <!-- 加入這一行 -->
+                  <img src="images/heading-img.png" alt="">
+                  </a> <!-- 到這一行 -->
+                <h2> ⬈點擊進入購物車車 ⬉</h2>
+              </div>
+
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
