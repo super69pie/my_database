@@ -138,7 +138,7 @@
                 <a href="shoping_car.php"> <!-- 加入這一行 -->
                   <img src="images/heading-img.png" alt="">
                   </a> <!-- 到這一行 -->
-                <h2> ⬈點擊進入購物車車 ⬉</h2>
+                <h2> ⬈點狗狗進入購物車車 ⬉</h2>
               </div>
                 <p>瀏覽你的商品</p>
                 <div class="row">
@@ -180,7 +180,7 @@
                 <a href="shoping_car.php"> <!-- 加入這一行 -->
                   <img src="images/heading-img.png" alt="">
                   </a> <!-- 到這一行 -->
-                <h2> ⬈點擊進入購物車車 ⬉</h2>
+                <h2> ⬈點狗狗進入購物車車 ⬉</h2>
               </div>
 
 

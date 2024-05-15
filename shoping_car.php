@@ -107,7 +107,13 @@
                     <a href="shop.php">
                         <img src="images/heading-img.png" alt="">
                     </a>
-                    <h2> ⬈點擊進入商店頁面 ⬉</h2>
+                    <h2> ⬈點狗狗進入商店頁面 ⬉</h2>
+                </div>
+                <div class="heading_container">
+                    <a href="gay.php">
+                        <img src="images/heading-img.png" alt="">
+                    </a>
+                    <h2> ⬈點狗狗進入甲甲頁面 ⬉</h2>
                 </div>
                 <p>瀏覽你的購物清單</p>
                 <div class="row">
@@ -150,7 +156,7 @@
                     <a href="shop.php">
                         <img src="images/heading-img.png" alt="">
                     </a>
-                    <h2> ⬈點擊進入商店頁面 ⬉</h2>
+                    <h2> ⬈點狗狗進入商店頁面 ⬉</h2>
                 </div>
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
