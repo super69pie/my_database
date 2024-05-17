@@ -73,7 +73,7 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg custom_nav-container">
                     <a class="navbar-brand" href="gogo.html">
-                        <img src="images/logo.png" alt="">
+                        <img src="images/pinkcock.png" alt="">
                     </a>
                     <div class="User_option">
                         <form class="form-inline my-2  mb-3 mb-lg-0">
@@ -92,7 +92,7 @@
                         <div class="overlay-content">
                             <a href="gogo.html">Home</a>
                             <a href="shop.php">Shop</a>
-                            <a href="contact.html">Contact Us</a>
+                            <a href="upload.php">Upload game</a>
                         </div>
                     </div>
                 </nav>
@@ -105,15 +105,15 @@
             <div class="detail-box">
                 <div class="heading_container">
                     <a href="shop.php">
-                        <img src="images/heading-img.png" alt="">
+                        <img src="images/esokissRicardo.gif" alt="">
                     </a>
                     <h2> ⬈點狗狗進入商店頁面 ⬉</h2>
                 </div>
                 <div class="heading_container">
                     <a href="gay.php">
-                        <img src="images/heading-img.png" alt="">
+                        <img src="images/esokissRicardo.gif" alt="">
                     </a>
-                    <h2> ⬈點狗狗進入甲甲頁面 ⬉</h2>
+                    <h2> ⬈點狗狗就幫你結帳！ ⬉</h2>
                 </div>
                 <p>瀏覽你的購物清單</p>
                 <div class="row">
@@ -154,7 +154,7 @@
             <div class="detail-box">
                 <div class="heading_container">
                     <a href="shop.php">
-                        <img src="images/heading-img.png" alt="">
+                        <img src="images/esokissRicardo.gif" alt="">
                     </a>
                     <h2> ⬈點狗狗進入商店頁面 ⬉</h2>
                 </div>

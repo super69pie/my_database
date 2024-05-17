@@ -12,11 +12,18 @@
     <link href="css/responsive.css" rel="stylesheet" />
     <style>
 
-div{
-  width: 1000px;
-  height: 500px;
+.esog_section{
+  width: 1920px;
+  height: 1080px;
   border:5px solid gray;
-  background-image: url("images/esog.png");
+  background-image: url("images/esokissRicardo.gif");
+}
+
+.fr_section{
+  width: 1920px;
+  height: 1080px;
+  border:5px solid gray;
+  background-image: url("images/esokisspunchfast.gif");
 }
         /* 商品外容器 */
 .product_box {
@@ -75,8 +82,44 @@ div{
 
     </style>
     <?php
-    include "database_connection.php";
-    session_start();
+        include "database_connection.php";
+        session_start();
+        $checkShoppingCarStmt = "SELECT * FROM `items` t1
+                                 JOIN shoping_car t2 ON t2.item_id = t1.item_id
+                                 WHERE t2.ID = :userID";
+        $checkShoppingCar = $db -> prepare($checkShoppingCarStmt);                        
+        $checkShoppingCar -> bindParam(':userID', $_SESSION['user_id']);
+        $checkShoppingCar -> execute();
+        // $shoppingCarResult = $checkShoppingCar -> fetch(PDO::FETCH_ASSOC);
+        $totalMoney = 0;
+        $itemIDArray = [];
+        while($row = $checkShoppingCar -> fetch(PDO::FETCH_ASSOC)){
+            // echo '<script>alert('.$row['price'].');</script>';
+            $totalMoney += $row['price']; 
+            $itemIDArray[] = $row['item_id'];
+        }
+
+        $checkoutInsertStmt = "INSERT INTO `checkout`(`buyerID`) VALUES (:buyerID)";
+        $checkoutInsert = $db -> prepare($checkoutInsertStmt);
+        // $checkoutInsert -> bindParam(':sellerID', $shoppingCarResult['ID']);
+        $checkoutInsert -> bindParam(':buyerID', $_SESSION['user_id']);
+        $checkoutInsert -> execute();
+        $orderID = $db -> lastInsertId();
+
+        $detailInsertStmt = "INSERT INTO `detail`(`orderID`, `money`, `item_id`) VALUES (:orderID, :money, :item_ids)";
+        $detailInsert = $db -> prepare($detailInsertStmt);
+        $itemIDString = implode(',', $itemIDArray);
+        $detailInsert -> bindParam(':orderID', $orderID);
+        $detailInsert -> bindParam(':money', $totalMoney);
+        $detailInsert -> bindParam(':item_ids', $itemIDString);
+        $detailInsert -> execute();
+
+
+        $stmt=$db->prepare("DELETE FROM `shoping_car` WHERE :userID");
+        $stmt -> bindParam(':userID', $_SESSION['user_id']);
+        $stmt->execute();
+        echo '<script>setTimeout(function(){location.href="gogo.html";}, 5000)</script>';
+
     ?>
 
 </head>
@@ -87,8 +130,13 @@ div{
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg custom_nav-container">
                     <a class="navbar-brand" href="gogo.html">
-                        <img src="images/logo.png" alt="">
+                        <img src="images/pinkcock.png" alt="">
                     </a>
+                    <h1>結帳成功！</h1>
+                    <a href="shoping_car.php"> <!-- 加入這一行 -->
+                  <img src="images/esog.png" alt="">
+                  </a> <!-- 到這一行 -->
+                <h2> ⬈點狗狗進入購物車車 ⬉</h2>
                     <div class="User_option">
                         <form class="form-inline my-2  mb-3 mb-lg-0">
                             <input type="search" placeholder="Search">
@@ -114,21 +162,11 @@ div{
         </header>
     </div>
 
-    <section class="about_section layout_padding">
-        <div></div>
+    <section class="esog_section layout_padding">
+        
     </section>
     
-    <section class="about_section layout_padding">
-        <div class="container">
-            <div class="detail-box">
-              <div class="heading_container">
-                <a href="shoping_car.php"> <!-- 加入這一行 -->
-                  <img src="images/heading-img.png" alt="">
-                  </a> <!-- 到這一行 -->
-                <h2> ⬈點狗狗進入購物車車 ⬉</h2>
-              </div>
-
-
+    <section class="fr_section layout_padding">
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script>

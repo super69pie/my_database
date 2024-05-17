@@ -104,7 +104,7 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg custom_nav-container">
                     <a class="navbar-brand" href="gogo.html">
-                        <img src="images/logo.png" alt="">
+                        <img src="images/pinkcock.png" alt="">
                     </a>
                     <div class="User_option">
                         <form class="form-inline my-2  mb-3 mb-lg-0">
@@ -123,7 +123,7 @@
                         <div class="overlay-content">
                             <a href="gogo.html">Home</a>
                             <a href="shop.php">Shop</a>
-                            <a href="contact.html">Contact Us</a>
+                            <a href="upload.php">Upload game</a>
                         </div>
                     </div>
                 </nav>
@@ -136,7 +136,7 @@
             <div class="detail-box">
               <div class="heading_container">
                 <a href="shoping_car.php"> <!-- 加入這一行 -->
-                  <img src="images/heading-img.png" alt="">
+                  <img src="images/esog.png" alt="">
                   </a> <!-- 到這一行 -->
                 <h2> ⬈點狗狗進入購物車車 ⬉</h2>
               </div>
@@ -178,7 +178,7 @@
             <div class="detail-box">
               <div class="heading_container">
                 <a href="shoping_car.php"> <!-- 加入這一行 -->
-                  <img src="images/heading-img.png" alt="">
+                  <img src="images/esog.png" alt="">
                   </a> <!-- 到這一行 -->
                 <h2> ⬈點狗狗進入購物車車 ⬉</h2>
               </div>
