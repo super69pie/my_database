@@ -83,7 +83,8 @@
         // 成功登入, 指定Session變數
         $_SESSION["login_session"] = true;
         $_SESSION["user_id"] =$user['ID'];
-        header("Location: gogo.html");
+        $_SESSION['username']=$user['account'];
+        header("Location: gogo.php");
     } else {  // 登入失敗
         echo "<center><font color='red'>";
         echo "使用者名稱或密碼錯誤!<br/>";

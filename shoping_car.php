@@ -90,7 +90,7 @@
                     </div>
                     <div id="myNav" class="overlay">
                         <div class="overlay-content">
-                            <a href="gogo.html">Home</a>
+                            <a href="gogo.php">Home</a>
                             <a href="shop.php">Shop</a>
                             <a href="upload.php">Upload game</a>
                         </div>

@@ -121,7 +121,7 @@
                     </div>
                     <div id="myNav" class="overlay">
                         <div class="overlay-content">
-                            <a href="gogo.html">Home</a>
+                            <a href="gogo.php">Home</a>
                             <a href="shop.php">Shop</a>
                             <a href="upload.php">Upload game</a>
                         </div>
@@ -147,8 +147,13 @@
                         $sql = "SELECT * FROM items";
                         $stmt = $db->prepare($sql);
                         $stmt->execute();
+                        $count=0;
                         if ($stmt->rowCount() > 0) {
                             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                                $count++;
+                                if($count%16==0){
+                                    break;
+                                }
                                 echo '<div class="col-md-4">';
                                 echo '<div class="product_box">';
                                 echo '<img src="'.$row['pic'].'">';
@@ -181,6 +186,9 @@
                   <img src="images/esog.png" alt="">
                   </a> <!-- 到這一行 -->
                 <h2> ⬈點狗狗進入購物車車 ⬉</h2>
+                <h3>分頁</h3>
+                <a href="shop.php"><button>1</button></a>
+                <a href="shop2.php"><button>2</button></a>
               </div>
 
 

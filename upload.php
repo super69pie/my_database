@@ -52,7 +52,7 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="gogo.html">
+          <a class="navbar-brand" href="gogo.php">
             <img src="images/logo.png" alt="">
           </a>
           <div class="" id="">
@@ -71,7 +71,7 @@
             </div>
             <div id="myNav" class="overlay">
               <div class="overlay-content">
-                <a href="gogo.html">Home</a>
+                <a href="gogo.php">Home</a>
                 <a href="shop.php">Shop</a>
                 <a href="upload.php">Upload game</a>
               </div>
@@ -89,24 +89,24 @@
           <div class="form_container">
             <div class="heading_container">
               <img src="images/heading-img.png" alt="">
-              <h2>上架你的遊戲辣！</h2>
-              <p>要寫清楚喔</p>
+              <h2>上架你的遊戲！</h2>
+              <p>資料要寫清楚</p>
             </div>
             <form action="upload.php" method="POST">
               <div>
-                <input type="text" placeholder="Game's Name" name="gname" />
+                <input type="text" placeholder="遊戲名稱" name="gname" />
               </div>
               <div>
-                <input type="text" placeholder="Price(NTD)" name="price" />
+                <input type="text" placeholder="價格(NTD)" name="price" />
               </div>
               <div>
-                <input type="text" placeholder="photo's link" name="link" />
+                <input type="text" placeholder="圖片的連結" name="link" />
               </div>
               <div>
-                <input type="text" class="message-box" placeholder="description" name="des" />
+                <input type="text" class="message-box" placeholder="遊戲描述" name="des" />
               </div>
               <div class="d-flex ">
-                <button type="submit">SEND</button>
+                <button type="submit">填寫完成！</button>
               </div>
             </form>
           </div>
